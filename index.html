@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>RGB Color Generator</title>
+  </head>
+  <body>
+    <h1 class="text-4xl font-bold text-center my-12">
+      RGB
+      <span class="text-purple-500">C</span><span class="text-green-500">o</span
+      ><span class="text-sky-400">l</span><span class="text-yellow-400">o</span
+      ><span class="text-lime-600">r</span>
+      Generator
+    </h1>
+    <div id="color-box" class="w-3/12 h-80 border mx-auto rounded"></div>
+    <p id="color-code" class="text-center mt-4 text-xl"></p>
+    <div class="flex justify-center items-center gap-32">
+      <div class="space-y-3">
+        <label for="">R</label>
+        <input id="rValue" class="border-2 w-20" type="number" required />
+        <br />
+        <label for="">G</label>
+        <input id="gValue" class="border-2 w-20" type="number" required />
+        <br />
+        <label for="">B</label>
+        <input id="bValue" class="border-2 w-20" type="number" required />
+      </div>
+      <div>
+        <button
+          onclick="generateColor()"
+          class="py-2 px-4 rounded-md border border-sky-600 transition font-medium hover:bg-sky-500 hover:text-white"
+        >
+          Generate
+        </button>
+      </div>
+    </div>
+    <div class="flex justify-center mt-8 gap-10">
+      <button
+        onclick="autoGenerateColor()"
+        class="py-2 px-4 rounded-md bg-sky-500 hover:bg-sky-400 transition text-white font-medium"
+      >
+        Auto Generate Color
+      </button>
+      <button
+        onclick="copyColor()"
+        class="py-2 px-4 rounded-md border border-sky-600 hover:bg-gray-50 transition font-medium"
+      >
+        Copy Color
+      </button>
+    </div>
+    <div id="modal-copy">     
+    </div>
+    <script src="./rgb.js"></script>
+  </body>
+</html>
