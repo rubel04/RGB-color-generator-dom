@@ -4,5 +4,5 @@ RGB Color Generator is an interactive and user-friendly website designed for eff
 
 ## live Link:
 
-penitent-taste.surge.sh
+https://penitent-taste.surge.sh/
 
